@@ -1,0 +1,64 @@
+@import "./_variables.scss";
+@import "bootstrap";
+@import "./_overrides.scss";
+@import "./utilities.scss";
+@import "./loaders.scss";
+
+body {
+  overscroll-behavior: none;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $body-bg;
+}
+
+main {
+  flex-grow: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.spacer-10 {
+  height: 10vh;
+}
+.spacer-20 {
+  height: 20vh;
+}
+.spacer-30 {
+  height: 30vh;
+}
+
+.before-enter {
+  opacity: 0;
+  transform: translateY(30%);
+  transition: all 0.8s ease;
+}
+
+.enter {
+  opacity: 1;
+  transition-delay: 0.1s;
+  transform: translateY(0);
+}
+
+input,
+textarea,
+select {
+  &:not(:placeholder-shown) {
+    &:valid {
+      border: 1px solid $success;
+    }
+    &:invalid {
+      border: 1px solid $danger;
+    }
+  }
+}
+
+form:invalid button[type="submit"] {
+  filter: grayscale(1);
+  pointer-events: none;
+}
