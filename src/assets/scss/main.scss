@@ -9,15 +9,12 @@ body {
 }
 
 #app {
-  display: flex;
-  flex-direction: column;
+
+
   min-height: 100vh;
-  background-color: $body-bg;
+  background-color: black;
 }
 
-main {
-  flex-grow: 1;
-}
 
 a {
   text-decoration: none;
@@ -43,6 +40,11 @@ a {
   opacity: 1;
   transition-delay: 0.1s;
   transform: translateY(0);
+}
+
+@font-face {
+  font-family: Beon;
+  src: url("src/assets/Beon.otf") format("opentype");
 }
 
 input,
